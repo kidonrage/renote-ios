@@ -28,9 +28,9 @@ class NotesListViewController: UIViewController {
         let button = UIButton()
         
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Play", for: .normal)
+        button.setTitle("Start", for: .normal)
         button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 40)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         button.backgroundColor = .backgroundYellow
         button.layer.cornerRadius = 30
         
@@ -74,7 +74,8 @@ class NotesListViewController: UIViewController {
             
             startButton.heightAnchor.constraint(equalTo: addButton.heightAnchor),
             startButton.centerYAnchor.constraint(equalTo: addButton.centerYAnchor),
-            startButton.rightAnchor.constraint(equalTo: addButton.leftAnchor, constant: -10)
+            startButton.rightAnchor.constraint(equalTo: addButton.leftAnchor, constant: -10),
+            startButton.widthAnchor.constraint(equalToConstant: 100)
         ])
     }
 
