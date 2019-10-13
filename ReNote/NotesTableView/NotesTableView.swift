@@ -21,7 +21,10 @@ class NotesTableView: UITableView{
         
         dataSource = self
         delegate = self
-        
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
         separatorStyle = .none
     }
     
@@ -43,7 +46,7 @@ extension NotesTableView: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = dequeueReusableCell(withIdentifier: NotesTableViewCell.reuseId, for: indexPath) as! NotesTableViewCell
         
-        let cellColor: UIColor = indexPath.row % 2 == 0 ? .white : .gray
+        let cellColor: UIColor = indexPath.row % 2 == 0 ? .white : .noteGray
         
         let note = notes[indexPath.row]
         
