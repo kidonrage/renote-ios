@@ -19,6 +19,14 @@ class LinkInputView: UIView {
         label.text = "(optional)"
         return label
     }()
+    
+    let linkInput: UITextField = {
+        let input = UITextField()
+        input.translatesAutoresizingMaskIntoConstraints = false
+        input.placeholder = "Enter a link..."
+        input.autocapitalizationType = .none
+        return input
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,6 +42,7 @@ class LinkInputView: UIView {
     private func setupUI() {
         addSubview(header)
         addSubview(optionalLabel)
+        addSubview(linkInput)
         
         NSLayoutConstraint.activate([
             header.topAnchor.constraint(equalTo: topAnchor),
@@ -41,6 +50,11 @@ class LinkInputView: UIView {
             
             optionalLabel.centerYAnchor.constraint(equalTo: header.centerYAnchor),
             optionalLabel.leftAnchor.constraint(equalTo: header.rightAnchor, constant: 10),
+            
+            linkInput.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 10),
+            linkInput.leftAnchor.constraint(equalTo: leftAnchor, constant: 10),
+            linkInput.rightAnchor.constraint(equalTo: rightAnchor, constant:  -10),
+            linkInput.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
     
