@@ -37,7 +37,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     
     func setHighlighted(_ isHighlighted: Bool) {
         if isHighlighted {
-            self.backgroundColor = UIColor(red: 255, green: 216, blue: 87, alpha: 1)
+            self.backgroundColor = UIColor(red: 255 / 255.0, green: 216 / 255.0, blue: 87 / 255.0, alpha: 1)
         } else {
             self.backgroundColor = UIColor(red: 255 / 255.0, green: 216 / 255.0, blue: 87 / 255.0, alpha: 0.32)
         }

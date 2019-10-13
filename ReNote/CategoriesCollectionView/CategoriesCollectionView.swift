@@ -8,9 +8,9 @@
 
 import UIKit
 
-class CategoriesCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class CategoriesCollectionView: UICollectionView {
     
-    var cells = [Category]()
+    var cells = [CategoryCellModel]()
 
     init() {
         let layout = UICollectionViewFlowLayout()
@@ -30,33 +30,50 @@ class CategoriesCollectionView: UICollectionView, UICollectionViewDelegate, UICo
         showsVerticalScrollIndicator = false
         
         backgroundColor = .white
-    }
-    
-    func setCategories(_ categories: [Category]) {
-        cells = categories
+        
+        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap)))
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    @objc func tap(sender: UITapGestureRecognizer) {
+        if let indexPath = self.indexPathForItem(at: sender.location(in: self)) {
+            let cell = self.cellForItem(at: indexPath) as! CategoryCollectionViewCell
+            cells[indexPath.row].isActive = !cells[indexPath.row].isActive
+            cell.setHighlighted(cells[indexPath.row].isActive)
+        }
+    }
+
+    
+    func setCategories(_ categories: [Category]) {
+        for category in categories {
+            cells.append(CategoryCellModel(category: category, isActive: false))
+        }
+    }
+    
+}
+
+extension CategoriesCollectionView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+     
+     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+         return cells.count
+    }
+        
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cellData = cells[indexPath.row]
+        let cell = dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.reuseId, for: indexPath) as! CategoryCollectionViewCell
+        cell.nameLabel.text = cellData.category.name
+        cell.setHighlighted(cellData.isActive)
+        return cell
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-//        let cellWidth = cell.nameLabel.intrinsicContentSize.width + 30
-        let cellWidth = cells[indexPath.row].name.size(withAttributes: nil)
+        let cellWidth = cells[indexPath.row].category.name.size(withAttributes: nil)
         
         return CGSize(width: cellWidth.width + 80, height: frame.height - 20 )
     }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cells.count
-   }
-       
-   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.reuseId, for: indexPath) as! CategoryCollectionViewCell
-        cell.nameLabel.text = cells[indexPath.row].name
-        cell.setHighlighted(false)
-        return cell
-   }
     
 }
