@@ -22,6 +22,9 @@
 		E1D1FB25235314AC001A7071 /* UIColor+theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB24235314AC001A7071 /* UIColor+theme.swift */; };
 		E1DF72EC23532723001B577C /* CategoryCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72EB23532723001B577C /* CategoryCellModel.swift */; };
 		E1DF72EF2353321E001B577C /* NoteCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72EE2353321E001B577C /* NoteCreationViewController.swift */; };
+		E1DF72F123533D2E001B577C /* CategorySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72F023533D2E001B577C /* CategorySelectionView.swift */; };
+		E1DF72F32353448E001B577C /* LinkInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72F22353448E001B577C /* LinkInputView.swift */; };
+		E1DF72F623534AC2001B577C /* SectionHeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72F523534AC2001B577C /* SectionHeaderLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		E1D1FB24235314AC001A7071 /* UIColor+theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+theme.swift"; sourceTree = "<group>"; };
 		E1DF72EB23532723001B577C /* CategoryCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellModel.swift; sourceTree = "<group>"; };
 		E1DF72EE2353321E001B577C /* NoteCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCreationViewController.swift; sourceTree = "<group>"; };
+		E1DF72F023533D2E001B577C /* CategorySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionView.swift; sourceTree = "<group>"; };
+		E1DF72F22353448E001B577C /* LinkInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkInputView.swift; sourceTree = "<group>"; };
+		E1DF72F523534AC2001B577C /* SectionHeaderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 		E1D1FAFC235201BD001A7071 /* ReNote */ = {
 			isa = PBXGroup;
 			children = (
+				E1DF72F423534A49001B577C /* UIComponents */,
 				E1DF72ED23533204001B577C /* NoteCreationViewController */,
 				E1D1FB1D23521D33001A7071 /* NotesTableView */,
 				E1D1FB1C23521D20001A7071 /* CategoriesCollectionView */,
@@ -122,8 +129,18 @@
 			isa = PBXGroup;
 			children = (
 				E1DF72EE2353321E001B577C /* NoteCreationViewController.swift */,
+				E1DF72F023533D2E001B577C /* CategorySelectionView.swift */,
+				E1DF72F22353448E001B577C /* LinkInputView.swift */,
 			);
 			path = NoteCreationViewController;
+			sourceTree = "<group>";
+		};
+		E1DF72F423534A49001B577C /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				E1DF72F523534AC2001B577C /* SectionHeaderLabel.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1DF72F623534AC2001B577C /* SectionHeaderLabel.swift in Sources */,
 				E1D1FB02235201BD001A7071 /* NotesListViewController.swift in Sources */,
 				E1D1FAFE235201BD001A7071 /* AppDelegate.swift in Sources */,
 				E1D1FB1423520B4D001A7071 /* CategoriesCollectionView.swift in Sources */,
@@ -207,8 +225,10 @@
 				E1D1FB00235201BD001A7071 /* SceneDelegate.swift in Sources */,
 				E1D1FB1B23520DB8001A7071 /* Category.swift in Sources */,
 				E1D1FB1F23521D4E001A7071 /* NotesTableView.swift in Sources */,
+				E1DF72F123533D2E001B577C /* CategorySelectionView.swift in Sources */,
 				E1DF72EF2353321E001B577C /* NoteCreationViewController.swift in Sources */,
 				E1D1FB2323522061001A7071 /* NotesTableViewCell.swift in Sources */,
+				E1DF72F32353448E001B577C /* LinkInputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

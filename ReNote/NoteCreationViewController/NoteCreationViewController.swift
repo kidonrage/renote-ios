@@ -9,12 +9,32 @@
 import UIKit
 
 class NoteCreationViewController: UIViewController {
+    
+    let categorySelectionView = CategorySelectionView()
+    let linkInputView = LinkInputView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Creating a note"
         view.backgroundColor = .white
+        
+        setupUI()
+    }
+    
+    private func setupUI() {
+        view.addSubview(categorySelectionView)
+        view.addSubview(linkInputView)
+        
+        NSLayoutConstraint.activate([
+            categorySelectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            categorySelectionView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            categorySelectionView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            
+            linkInputView.topAnchor.constraint(equalTo: categorySelectionView.bottomAnchor, constant: 10),
+            linkInputView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
+            linkInputView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor)
+        ])
     }
     
 
