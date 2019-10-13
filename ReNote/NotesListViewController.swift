@@ -20,7 +20,10 @@ class NotesListViewController: UIViewController {
         button.backgroundColor = .backgroundYellow
         button.layer.cornerRadius = 30
         button.titleLabel?.font = UIFont.systemFont(ofSize: 40)
+        button.titleEdgeInsets.bottom = 4
         button.setTitleColor(.black, for: .normal)
+        
+        button.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
         
         return button
     }()
@@ -48,6 +51,10 @@ class NotesListViewController: UIViewController {
         notesTableView.setNotes(Note.fetchNotes())
         
         setupUI()
+    }
+    
+    @objc func addButtonTapped() {
+        navigationController?.pushViewController(NoteCreationViewController(), animated: true)
     }
     
     private func setupUI() {
