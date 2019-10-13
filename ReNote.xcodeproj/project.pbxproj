@@ -19,6 +19,7 @@
 		E1D1FB1F23521D4E001A7071 /* NotesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB1E23521D4E001A7071 /* NotesTableView.swift */; };
 		E1D1FB2123521E17001A7071 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB2023521E17001A7071 /* Note.swift */; };
 		E1D1FB2323522061001A7071 /* NotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB2223522061001A7071 /* NotesTableViewCell.swift */; };
+		E1D1FB25235314AC001A7071 /* UIColor+theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB24235314AC001A7071 /* UIColor+theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		E1D1FB1E23521D4E001A7071 /* NotesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableView.swift; sourceTree = "<group>"; };
 		E1D1FB2023521E17001A7071 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		E1D1FB2223522061001A7071 /* NotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewCell.swift; sourceTree = "<group>"; };
+		E1D1FB24235314AC001A7071 /* UIColor+theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+theme.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				E1D1FB06235201BE001A7071 /* Assets.xcassets */,
 				E1D1FB08235201BE001A7071 /* LaunchScreen.storyboard */,
 				E1D1FB0B235201BE001A7071 /* Info.plist */,
+				E1D1FB24235314AC001A7071 /* UIColor+theme.swift */,
 			);
 			path = ReNote;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				E1D1FB02235201BD001A7071 /* NotesListViewController.swift in Sources */,
 				E1D1FAFE235201BD001A7071 /* AppDelegate.swift in Sources */,
 				E1D1FB1423520B4D001A7071 /* CategoriesCollectionView.swift in Sources */,
+				E1D1FB25235314AC001A7071 /* UIColor+theme.swift in Sources */,
 				E1D1FB2123521E17001A7071 /* Note.swift in Sources */,
 				E1D1FB1823520C3A001A7071 /* CategoryCollectionViewCell.swift in Sources */,
 				E1D1FB00235201BD001A7071 /* SceneDelegate.swift in Sources */,
