@@ -10,11 +10,27 @@ import UIKit
 
 class NoteCreationViewController: UIViewController {
     
+    var chosenCategories = [Int]()
+    
     let categorySelectionView = CategorySelectionView()
     let linkInputView = LinkInputView()
+    let noteTextInputs = NoteTextInputView()
+    let addButton: UIButton = {
+        let title = "Create"
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle(title.uppercased(), for: .normal)
+        button.backgroundColor = .backgroundYellow
+        button.setTitleColor(.black, for: .normal)
+        button.layer.cornerRadius = 4
+        button.addTarget(self, action: #selector(createNote), for: .touchUpInside)
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        categorySelectionView.categoriesList.categoriesDelegate = self
 
         title = "Creating a note"
         view.backgroundColor = .white
@@ -25,6 +41,8 @@ class NoteCreationViewController: UIViewController {
     private func setupUI() {
         view.addSubview(categorySelectionView)
         view.addSubview(linkInputView)
+        view.addSubview(noteTextInputs)
+        view.addSubview(addButton)
         
         NSLayoutConstraint.activate([
             categorySelectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
@@ -33,8 +51,29 @@ class NoteCreationViewController: UIViewController {
             
             linkInputView.topAnchor.constraint(equalTo: categorySelectionView.bottomAnchor, constant: 10),
             linkInputView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
-            linkInputView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor)
+            linkInputView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
+            
+            noteTextInputs.topAnchor.constraint(equalTo: linkInputView.bottomAnchor, constant: 10),
+            noteTextInputs.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
+            noteTextInputs.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
+            
+            addButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30),
+            addButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            addButton.heightAnchor.constraint(equalToConstant: 50),
+            addButton.widthAnchor.constraint(equalToConstant: 125)
         ])
+    }
+    
+    @objc func createNote() {
+        guard let name = noteTextInputs.noteNameInput.text else {return}
+        guard let text = noteTextInputs.noteTextInput.text else {return}
+        var attachedLink: URL? = nil
+        if let linkText = linkInputView.linkInput.text {
+            attachedLink = URL(string: linkText)
+        }
+        
+        let note = Note(id: 0, associatedCategories: chosenCategories, name: name, text: text, attachedLink: attachedLink)
+        print(note)
     }
     
 
@@ -48,4 +87,16 @@ class NoteCreationViewController: UIViewController {
     }
     */
 
+}
+
+extension NoteCreationViewController: CategoriesCollectionViewDelegate {
+    func categorySelected(id: Int) {
+        chosenCategories.append(id)
+        print(chosenCategories)
+    }
+    
+    func categoryDeselected(id: Int) {
+        chosenCategories = chosenCategories.filter {$0 != id}
+        print(chosenCategories)
+    }
 }

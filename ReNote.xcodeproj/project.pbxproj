@@ -25,6 +25,8 @@
 		E1DF72F123533D2E001B577C /* CategorySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72F023533D2E001B577C /* CategorySelectionView.swift */; };
 		E1DF72F32353448E001B577C /* LinkInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72F22353448E001B577C /* LinkInputView.swift */; };
 		E1DF72F623534AC2001B577C /* SectionHeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72F523534AC2001B577C /* SectionHeaderLabel.swift */; };
+		E1DF72F823535263001B577C /* NoteTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72F723535263001B577C /* NoteTextInputView.swift */; };
+		E1DF72FA235353C6001B577C /* UITextFieldLimited.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72F9235353C6001B577C /* UITextFieldLimited.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		E1DF72F023533D2E001B577C /* CategorySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionView.swift; sourceTree = "<group>"; };
 		E1DF72F22353448E001B577C /* LinkInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkInputView.swift; sourceTree = "<group>"; };
 		E1DF72F523534AC2001B577C /* SectionHeaderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderLabel.swift; sourceTree = "<group>"; };
+		E1DF72F723535263001B577C /* NoteTextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTextInputView.swift; sourceTree = "<group>"; };
+		E1DF72F9235353C6001B577C /* UITextFieldLimited.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldLimited.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 				E1DF72EE2353321E001B577C /* NoteCreationViewController.swift */,
 				E1DF72F023533D2E001B577C /* CategorySelectionView.swift */,
 				E1DF72F22353448E001B577C /* LinkInputView.swift */,
+				E1DF72F723535263001B577C /* NoteTextInputView.swift */,
 			);
 			path = NoteCreationViewController;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				E1DF72F523534AC2001B577C /* SectionHeaderLabel.swift */,
+				E1DF72F9235353C6001B577C /* UITextFieldLimited.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -220,8 +226,10 @@
 				E1D1FB1423520B4D001A7071 /* CategoriesCollectionView.swift in Sources */,
 				E1DF72EC23532723001B577C /* CategoryCellModel.swift in Sources */,
 				E1D1FB25235314AC001A7071 /* UIColor+theme.swift in Sources */,
+				E1DF72FA235353C6001B577C /* UITextFieldLimited.swift in Sources */,
 				E1D1FB2123521E17001A7071 /* Note.swift in Sources */,
 				E1D1FB1823520C3A001A7071 /* CategoryCollectionViewCell.swift in Sources */,
+				E1DF72F823535263001B577C /* NoteTextInputView.swift in Sources */,
 				E1D1FB00235201BD001A7071 /* SceneDelegate.swift in Sources */,
 				E1D1FB1B23520DB8001A7071 /* Category.swift in Sources */,
 				E1D1FB1F23521D4E001A7071 /* NotesTableView.swift in Sources */,
