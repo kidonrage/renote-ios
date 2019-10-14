@@ -10,6 +10,8 @@ import UIKit
 
 class CategoriesCollectionView: UICollectionView {
     
+    var categoriesDelegate: CategoriesCollectionViewDelegate?
+    
     var cells = [CategoryCellModel]()
 
     init() {
@@ -43,6 +45,15 @@ class CategoriesCollectionView: UICollectionView {
             let cell = self.cellForItem(at: indexPath) as! CategoryCollectionViewCell
             cells[indexPath.row].isActive = !cells[indexPath.row].isActive
             cell.setHighlighted(cells[indexPath.row].isActive)
+            
+            if let delegate = self.categoriesDelegate {
+                let categoryId = cells[indexPath.row].category.id
+                if cells[indexPath.row].isActive {
+                    delegate.categorySelected(id: categoryId)
+                } else {
+                    delegate.categoryDeselected(id: categoryId)
+                }
+            }
         }
     }
 
@@ -76,4 +87,9 @@ extension CategoriesCollectionView: UICollectionViewDelegate, UICollectionViewDa
         return CGSize(width: cellWidth.width + 80, height: frame.height - 20 )
     }
     
+}
+
+protocol CategoriesCollectionViewDelegate {
+    func categorySelected(id: Int)
+    func categoryDeselected(id: Int)
 }
