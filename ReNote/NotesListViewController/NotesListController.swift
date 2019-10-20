@@ -7,12 +7,21 @@
 //
 
 import UIKit
+import ReNote_Core
 
-class NotesListViewController: UIViewController {
+class NotesListController: UIViewController {
     
-    private let categoriesCollectionView = CategoriesCollectionView()
-    private let notesTableView = NotesTableView()
-    private let addButton: UIButton = {
+    let storage = Storage()
+    var notes = [Note]()
+    var selectedCategories = [Int]() {
+        didSet {
+            filterNotesByCategories(selectedCategories)
+        }
+    }
+    
+    let categoriesCollectionView = CategoriesCollectionView()
+    let notesTableView = NotesTableView()
+    let addButton: UIButton = {
         let button = UIButton()
         
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -27,7 +36,7 @@ class NotesListViewController: UIViewController {
         
         return button
     }()
-    private let startButton: UIButton = {
+    let startButton: UIButton = {
         let button = UIButton()
         
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -37,24 +46,39 @@ class NotesListViewController: UIViewController {
         button.backgroundColor = .backgroundYellow
         button.layer.cornerRadius = 30
         
+        button.addTarget(self, action: #selector(startTrainingButtonTapped), for: .touchUpInside)
+        
         return button
     }()
-    
-    private var chosenCategories = [Int]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Notes"
+        view.backgroundColor = .white
         
-        categoriesCollectionView.setCategories(Category.fetchCategories())
-        notesTableView.setNotes(Note.fetchNotes())
+        notes = storage.getNotes()
+        
+        categoriesCollectionView.categoriesDelegate = self
+        categoriesCollectionView.setCategories(storage.getCategories())
+        
+        notesTableView.delegate = self
+        notesTableView.dataSource = self
         
         setupUI()
     }
     
     @objc func addButtonTapped() {
-        navigationController?.pushViewController(NoteCreationViewController(), animated: true)
+        let noteCreationController = NoteCreationViewController()
+        noteCreationController.delegate = self
+        
+        let navController = UINavigationController(rootViewController: noteCreationController)
+        
+        present(navController, animated: true, completion: nil)
+    }
+    
+    @objc func startTrainingButtonTapped() {
+        navigationController?.pushViewController(StartTrainingViewController(), animated: true)
     }
     
     private func setupUI() {
@@ -85,7 +109,19 @@ class NotesListViewController: UIViewController {
             startButton.widthAnchor.constraint(equalToConstant: 100)
         ])
     }
-
+    
+    func filterNotesByCategories(_ categories: [Int]) {
+        var filteredNotes = [Note]()
+        
+        if categories.contains(-1) {
+            filteredNotes = storage.getNotes()
+        } else {
+            let longCategories = categories.map { category in KotlinLong(value: Int64(category))}
+            filteredNotes = storage.getNotesForCategories(categoriesIds: longCategories)
+        }
+        
+        notes = filteredNotes
+        notesTableView.reloadData()
+    }
 
 }
-
