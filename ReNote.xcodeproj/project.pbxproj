@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E18BCC782355F605005B1CE3 /* ReNote_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18BCC762355F5FE005B1CE3 /* ReNote_Core.framework */; };
+		E18BCC792355F605005B1CE3 /* ReNote_Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E18BCC762355F5FE005B1CE3 /* ReNote_Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E1D1FAFE235201BD001A7071 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FAFD235201BD001A7071 /* AppDelegate.swift */; };
 		E1D1FB00235201BD001A7071 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FAFF235201BD001A7071 /* SceneDelegate.swift */; };
-		E1D1FB02235201BD001A7071 /* NotesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB01235201BD001A7071 /* NotesListViewController.swift */; };
+		E1D1FB02235201BD001A7071 /* NotesListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB01235201BD001A7071 /* NotesListController.swift */; };
 		E1D1FB05235201BD001A7071 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D1FB03235201BD001A7071 /* Main.storyboard */; };
 		E1D1FB07235201BE001A7071 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D1FB06235201BE001A7071 /* Assets.xcassets */; };
 		E1D1FB0A235201BE001A7071 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D1FB08235201BE001A7071 /* LaunchScreen.storyboard */; };
 		E1D1FB1423520B4D001A7071 /* CategoriesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB1323520B4D001A7071 /* CategoriesCollectionView.swift */; };
 		E1D1FB1823520C3A001A7071 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB1723520C3A001A7071 /* CategoryCollectionViewCell.swift */; };
-		E1D1FB1B23520DB8001A7071 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB1A23520DB8001A7071 /* Category.swift */; };
 		E1D1FB1F23521D4E001A7071 /* NotesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB1E23521D4E001A7071 /* NotesTableView.swift */; };
-		E1D1FB2123521E17001A7071 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB2023521E17001A7071 /* Note.swift */; };
 		E1D1FB2323522061001A7071 /* NotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB2223522061001A7071 /* NotesTableViewCell.swift */; };
 		E1D1FB25235314AC001A7071 /* UIColor+theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB24235314AC001A7071 /* UIColor+theme.swift */; };
 		E1DF72EC23532723001B577C /* CategoryCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72EB23532723001B577C /* CategoryCellModel.swift */; };
@@ -27,22 +27,39 @@
 		E1DF72F623534AC2001B577C /* SectionHeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72F523534AC2001B577C /* SectionHeaderLabel.swift */; };
 		E1DF72F823535263001B577C /* NoteTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72F723535263001B577C /* NoteTextInputView.swift */; };
 		E1DF72FA235353C6001B577C /* UITextFieldLimited.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72F9235353C6001B577C /* UITextFieldLimited.swift */; };
+		E1DF72FD23542B55001B577C /* StartTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72FC23542B55001B577C /* StartTrainingViewController.swift */; };
+		E1FFC2A1235C2FF400790838 /* NotesListController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFC2A0235C2FF400790838 /* NotesListController+UITableView.swift */; };
+		E1FFC2A3235C315400790838 /* NotesListController+CategoriesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFC2A2235C315400790838 /* NotesListController+CategoriesCollectionView.swift */; };
+		E1FFC2A5235C318800790838 /* NotesListController+NoteCreationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFC2A4235C318800790838 /* NotesListController+NoteCreationController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E18BCC6A2355ED13005B1CE3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E18BCC792355F605005B1CE3 /* ReNote_Core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		E18BCC762355F5FE005B1CE3 /* ReNote_Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReNote_Core.framework; path = ../../Study/KotlinNative/_ReNote/build/bin/ios/debugFramework/ReNote_Core.framework; sourceTree = "<group>"; };
 		E1D1FAFA235201BD001A7071 /* ReNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D1FAFD235201BD001A7071 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1D1FAFF235201BD001A7071 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E1D1FB01235201BD001A7071 /* NotesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListViewController.swift; sourceTree = "<group>"; };
+		E1D1FB01235201BD001A7071 /* NotesListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListController.swift; sourceTree = "<group>"; };
 		E1D1FB04235201BD001A7071 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1D1FB06235201BE001A7071 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1D1FB09235201BE001A7071 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1D1FB0B235201BE001A7071 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1D1FB1323520B4D001A7071 /* CategoriesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionView.swift; sourceTree = "<group>"; };
 		E1D1FB1723520C3A001A7071 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
-		E1D1FB1A23520DB8001A7071 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		E1D1FB1E23521D4E001A7071 /* NotesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableView.swift; sourceTree = "<group>"; };
-		E1D1FB2023521E17001A7071 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		E1D1FB2223522061001A7071 /* NotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewCell.swift; sourceTree = "<group>"; };
 		E1D1FB24235314AC001A7071 /* UIColor+theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+theme.swift"; sourceTree = "<group>"; };
 		E1DF72EB23532723001B577C /* CategoryCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellModel.swift; sourceTree = "<group>"; };
@@ -52,6 +69,10 @@
 		E1DF72F523534AC2001B577C /* SectionHeaderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderLabel.swift; sourceTree = "<group>"; };
 		E1DF72F723535263001B577C /* NoteTextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTextInputView.swift; sourceTree = "<group>"; };
 		E1DF72F9235353C6001B577C /* UITextFieldLimited.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldLimited.swift; sourceTree = "<group>"; };
+		E1DF72FC23542B55001B577C /* StartTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTrainingViewController.swift; sourceTree = "<group>"; };
+		E1FFC2A0235C2FF400790838 /* NotesListController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotesListController+UITableView.swift"; sourceTree = "<group>"; };
+		E1FFC2A2235C315400790838 /* NotesListController+CategoriesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotesListController+CategoriesCollectionView.swift"; sourceTree = "<group>"; };
+		E1FFC2A4235C318800790838 /* NotesListController+NoteCreationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotesListController+NoteCreationController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,17 +80,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E18BCC782355F605005B1CE3 /* ReNote_Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E18BCC5B2355EB9E005B1CE3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E18BCC762355F5FE005B1CE3 /* ReNote_Core.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E1D1FAF1235201BD001A7071 = {
 			isa = PBXGroup;
 			children = (
 				E1D1FAFC235201BD001A7071 /* ReNote */,
 				E1D1FAFB235201BD001A7071 /* Products */,
+				E18BCC5B2355EB9E005B1CE3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,14 +115,14 @@
 		E1D1FAFC235201BD001A7071 /* ReNote */ = {
 			isa = PBXGroup;
 			children = (
+				E1FFC29F235C2FCE00790838 /* NotesListViewController */,
+				E1DF72FB23542B0E001B577C /* StartTrainingViewController */,
 				E1DF72F423534A49001B577C /* UIComponents */,
 				E1DF72ED23533204001B577C /* NoteCreationViewController */,
 				E1D1FB1D23521D33001A7071 /* NotesTableView */,
 				E1D1FB1C23521D20001A7071 /* CategoriesCollectionView */,
-				E1D1FB1923520DA3001A7071 /* Model */,
 				E1D1FAFD235201BD001A7071 /* AppDelegate.swift */,
 				E1D1FAFF235201BD001A7071 /* SceneDelegate.swift */,
-				E1D1FB01235201BD001A7071 /* NotesListViewController.swift */,
 				E1D1FB03235201BD001A7071 /* Main.storyboard */,
 				E1D1FB06235201BE001A7071 /* Assets.xcassets */,
 				E1D1FB08235201BE001A7071 /* LaunchScreen.storyboard */,
@@ -99,15 +130,6 @@
 				E1D1FB24235314AC001A7071 /* UIColor+theme.swift */,
 			);
 			path = ReNote;
-			sourceTree = "<group>";
-		};
-		E1D1FB1923520DA3001A7071 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				E1D1FB1A23520DB8001A7071 /* Category.swift */,
-				E1D1FB2023521E17001A7071 /* Note.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		E1D1FB1C23521D20001A7071 /* CategoriesCollectionView */ = {
@@ -149,6 +171,25 @@
 			path = UIComponents;
 			sourceTree = "<group>";
 		};
+		E1DF72FB23542B0E001B577C /* StartTrainingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E1DF72FC23542B55001B577C /* StartTrainingViewController.swift */,
+			);
+			path = StartTrainingViewController;
+			sourceTree = "<group>";
+		};
+		E1FFC29F235C2FCE00790838 /* NotesListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E1D1FB01235201BD001A7071 /* NotesListController.swift */,
+				E1FFC2A0235C2FF400790838 /* NotesListController+UITableView.swift */,
+				E1FFC2A2235C315400790838 /* NotesListController+CategoriesCollectionView.swift */,
+				E1FFC2A4235C318800790838 /* NotesListController+NoteCreationController.swift */,
+			);
+			path = NotesListViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,6 +200,7 @@
 				E1D1FAF6235201BD001A7071 /* Sources */,
 				E1D1FAF7235201BD001A7071 /* Frameworks */,
 				E1D1FAF8235201BD001A7071 /* Resources */,
+				E18BCC6A2355ED13005B1CE3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,19 +263,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1DF72F623534AC2001B577C /* SectionHeaderLabel.swift in Sources */,
-				E1D1FB02235201BD001A7071 /* NotesListViewController.swift in Sources */,
+				E1D1FB02235201BD001A7071 /* NotesListController.swift in Sources */,
 				E1D1FAFE235201BD001A7071 /* AppDelegate.swift in Sources */,
 				E1D1FB1423520B4D001A7071 /* CategoriesCollectionView.swift in Sources */,
 				E1DF72EC23532723001B577C /* CategoryCellModel.swift in Sources */,
 				E1D1FB25235314AC001A7071 /* UIColor+theme.swift in Sources */,
 				E1DF72FA235353C6001B577C /* UITextFieldLimited.swift in Sources */,
-				E1D1FB2123521E17001A7071 /* Note.swift in Sources */,
 				E1D1FB1823520C3A001A7071 /* CategoryCollectionViewCell.swift in Sources */,
 				E1DF72F823535263001B577C /* NoteTextInputView.swift in Sources */,
 				E1D1FB00235201BD001A7071 /* SceneDelegate.swift in Sources */,
-				E1D1FB1B23520DB8001A7071 /* Category.swift in Sources */,
+				E1DF72FD23542B55001B577C /* StartTrainingViewController.swift in Sources */,
 				E1D1FB1F23521D4E001A7071 /* NotesTableView.swift in Sources */,
+				E1FFC2A1235C2FF400790838 /* NotesListController+UITableView.swift in Sources */,
 				E1DF72F123533D2E001B577C /* CategorySelectionView.swift in Sources */,
+				E1FFC2A3235C315400790838 /* NotesListController+CategoriesCollectionView.swift in Sources */,
+				E1FFC2A5235C318800790838 /* NotesListController+NoteCreationController.swift in Sources */,
 				E1DF72EF2353321E001B577C /* NoteCreationViewController.swift in Sources */,
 				E1D1FB2323522061001A7071 /* NotesTableViewCell.swift in Sources */,
 				E1DF72F32353448E001B577C /* LinkInputView.swift in Sources */,
@@ -298,6 +342,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = /Users/vladeliseev/Study/KotlinNative/_ReNote/build/bin/ios/debugFramework;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -358,6 +403,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = /Users/vladeliseev/Study/KotlinNative/_ReNote/build/bin/ios/debugFramework;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -382,6 +428,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RNXT6P5KC8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ReNote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -400,6 +450,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RNXT6P5KC8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ReNote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
