@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReNote_Core
 
 class CategoriesCollectionView: UICollectionView {
     
@@ -49,19 +50,32 @@ class CategoriesCollectionView: UICollectionView {
             if let delegate = self.categoriesDelegate {
                 let categoryId = cells[indexPath.row].category.id
                 if cells[indexPath.row].isActive {
-                    delegate.categorySelected(id: categoryId)
+                    delegate.categorySelected(id: Int(categoryId))
                 } else {
-                    delegate.categoryDeselected(id: categoryId)
+                    delegate.categoryDeselected(id: Int(categoryId))
                 }
             }
         }
     }
-
     
-    func setCategories(_ categories: [Category]) {
+    func setCategories(_ categories: [ReNote_Core.Category]) {
+        var newCells = [CategoryCellModel]()
+        
+        newCells.append(CategoryCellModel(category: ReNote_Core.Category(id: -1, name: "All"), isActive: true))
+        
         for category in categories {
-            cells.append(CategoryCellModel(category: category, isActive: false))
+            newCells.append(CategoryCellModel(category: category, isActive: false))
         }
+        
+        cells = newCells
+        
+        reloadData()
+    }
+    
+    func addCategory(_ category: ReNote_Core.Category) {
+        cells.append(CategoryCellModel(category: category, isActive: true))
+        
+        insertItems(at: [IndexPath(row: cells.count - 1, section: 0)])
     }
     
 }
