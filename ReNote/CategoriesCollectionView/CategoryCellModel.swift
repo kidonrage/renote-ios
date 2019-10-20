@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import ReNote_Core
 
 struct CategoryCellModel {
-    let category: Category
+    let category: ReNote_Core.Category
     var isActive: Bool
 }
