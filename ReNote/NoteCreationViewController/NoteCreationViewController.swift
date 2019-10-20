@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import ReNote_Core
 
 class NoteCreationViewController: UIViewController {
     
+    let storage = Storage()
     var chosenCategories = [Int]()
+    
+    var delegate: NoteCreationControllerDelegate?
     
     let categorySelectionView = CategorySelectionView()
     let linkInputView = LinkInputView()
@@ -67,16 +71,26 @@ class NoteCreationViewController: UIViewController {
     @objc func createNote() {
         guard let name = noteTextInputs.noteNameInput.text else {return}
         guard let text = noteTextInputs.noteTextInput.text else {return}
+        
         var attachedLink: URL? = nil
         if let linkText = linkInputView.linkInput.text {
             attachedLink = URL(string: linkText)
         }
         
-        let note = Note(id: 0, associatedCategories: chosenCategories, name: name, text: text, attachedLink: attachedLink)
-        print(note)
+        let chosenCategories = self.chosenCategories.map { categoryId in KotlinLong(value: Int64(categoryId))}
+        
+        let addedNote = storage.addNote(
+            name: name,
+            text: text,
+            attachedLink: attachedLink?.absoluteString,
+            attachedCategories: chosenCategories
+        )
+
+        dismiss(animated: true) {
+            self.delegate?.didAddNote(addedNote)
+        }
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -99,4 +113,8 @@ extension NoteCreationViewController: CategoriesCollectionViewDelegate {
         chosenCategories = chosenCategories.filter {$0 != id}
         print(chosenCategories)
     }
+}
+
+protocol NoteCreationControllerDelegate {
+    func didAddNote(_ note: Note)
 }
