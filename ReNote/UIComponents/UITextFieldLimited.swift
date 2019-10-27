@@ -22,10 +22,11 @@ class UITextFieldLimited: UITextField, UITextFieldDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let currentString = textField.text! as NSString
         let newString: NSString = currentString.replacingCharacters(in: range, with: string) as NSString
         return newString.length <= maxLength
     }
-
+    
 }
