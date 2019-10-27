@@ -57,10 +57,9 @@ class NotesListController: UIViewController {
         title = "Notes"
         view.backgroundColor = .white
         
-        notes = storage.getNotes()
-        
         categoriesCollectionView.categoriesDelegate = self
         categoriesCollectionView.setCategories(storage.getCategories())
+        categoriesCollectionView.selectCategory(at: IndexPath(row: 0, section: 0))
         
         notesTableView.delegate = self
         notesTableView.dataSource = self
@@ -72,9 +71,9 @@ class NotesListController: UIViewController {
         let noteCreationController = NoteCreationViewController()
         noteCreationController.delegate = self
         
-        let navController = UINavigationController(rootViewController: noteCreationController)
+//        let navController = UINavigationController(rootViewController: noteCreationController)
         
-        present(navController, animated: true, completion: nil)
+        present(noteCreationController, animated: true, completion: nil)
     }
     
     @objc func startTrainingButtonTapped() {
@@ -111,6 +110,7 @@ class NotesListController: UIViewController {
     }
     
     func filterNotesByCategories(_ categories: [Int]) {
+        print(categories)
         var filteredNotes = [Note]()
         
         if categories.contains(-1) {

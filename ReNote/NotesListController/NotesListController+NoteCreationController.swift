@@ -10,6 +10,10 @@ import UIKit
 import ReNote_Core
 
 extension NotesListController: NoteCreationControllerDelegate {
+    func didAddCategory(_ category: ReNote_Core.Category) {
+        categoriesCollectionView.addCategory(category)
+    }
+    
     func didAddNote(_ note: Note) {
         notes.insert(note, at: 0)
         

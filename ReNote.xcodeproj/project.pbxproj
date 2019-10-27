@@ -20,7 +20,6 @@
 		E1D1FB1F23521D4E001A7071 /* NotesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB1E23521D4E001A7071 /* NotesTableView.swift */; };
 		E1D1FB2323522061001A7071 /* NotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB2223522061001A7071 /* NotesTableViewCell.swift */; };
 		E1D1FB25235314AC001A7071 /* UIColor+theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB24235314AC001A7071 /* UIColor+theme.swift */; };
-		E1DF72EC23532723001B577C /* CategoryCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72EB23532723001B577C /* CategoryCellModel.swift */; };
 		E1DF72EF2353321E001B577C /* NoteCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72EE2353321E001B577C /* NoteCreationViewController.swift */; };
 		E1DF72F123533D2E001B577C /* CategorySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72F023533D2E001B577C /* CategorySelectionView.swift */; };
 		E1DF72F32353448E001B577C /* LinkInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72F22353448E001B577C /* LinkInputView.swift */; };
@@ -62,7 +61,6 @@
 		E1D1FB1E23521D4E001A7071 /* NotesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableView.swift; sourceTree = "<group>"; };
 		E1D1FB2223522061001A7071 /* NotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewCell.swift; sourceTree = "<group>"; };
 		E1D1FB24235314AC001A7071 /* UIColor+theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+theme.swift"; sourceTree = "<group>"; };
-		E1DF72EB23532723001B577C /* CategoryCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellModel.swift; sourceTree = "<group>"; };
 		E1DF72EE2353321E001B577C /* NoteCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCreationViewController.swift; sourceTree = "<group>"; };
 		E1DF72F023533D2E001B577C /* CategorySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionView.swift; sourceTree = "<group>"; };
 		E1DF72F22353448E001B577C /* LinkInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkInputView.swift; sourceTree = "<group>"; };
@@ -115,7 +113,7 @@
 		E1D1FAFC235201BD001A7071 /* ReNote */ = {
 			isa = PBXGroup;
 			children = (
-				E1FFC29F235C2FCE00790838 /* NotesListViewController */,
+				E1FFC29F235C2FCE00790838 /* NotesListController */,
 				E1DF72FB23542B0E001B577C /* StartTrainingViewController */,
 				E1DF72F423534A49001B577C /* UIComponents */,
 				E1DF72ED23533204001B577C /* NoteCreationViewController */,
@@ -137,7 +135,6 @@
 			children = (
 				E1D1FB1323520B4D001A7071 /* CategoriesCollectionView.swift */,
 				E1D1FB1723520C3A001A7071 /* CategoryCollectionViewCell.swift */,
-				E1DF72EB23532723001B577C /* CategoryCellModel.swift */,
 			);
 			path = CategoriesCollectionView;
 			sourceTree = "<group>";
@@ -179,7 +176,7 @@
 			path = StartTrainingViewController;
 			sourceTree = "<group>";
 		};
-		E1FFC29F235C2FCE00790838 /* NotesListViewController */ = {
+		E1FFC29F235C2FCE00790838 /* NotesListController */ = {
 			isa = PBXGroup;
 			children = (
 				E1D1FB01235201BD001A7071 /* NotesListController.swift */,
@@ -187,7 +184,7 @@
 				E1FFC2A2235C315400790838 /* NotesListController+CategoriesCollectionView.swift */,
 				E1FFC2A4235C318800790838 /* NotesListController+NoteCreationController.swift */,
 			);
-			path = NotesListViewController;
+			path = NotesListController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +263,6 @@
 				E1D1FB02235201BD001A7071 /* NotesListController.swift in Sources */,
 				E1D1FAFE235201BD001A7071 /* AppDelegate.swift in Sources */,
 				E1D1FB1423520B4D001A7071 /* CategoriesCollectionView.swift in Sources */,
-				E1DF72EC23532723001B577C /* CategoryCellModel.swift in Sources */,
 				E1D1FB25235314AC001A7071 /* UIColor+theme.swift in Sources */,
 				E1DF72FA235353C6001B577C /* UITextFieldLimited.swift in Sources */,
 				E1D1FB1823520C3A001A7071 /* CategoryCollectionViewCell.swift in Sources */,
