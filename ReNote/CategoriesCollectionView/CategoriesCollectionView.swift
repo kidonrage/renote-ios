@@ -13,7 +13,10 @@ class CategoriesCollectionView: UICollectionView {
     
     var categoriesDelegate: CategoriesCollectionViewDelegate?
     
-    var cells = [CategoryCellModel]()
+    var categories = [ReNote_Core.Category]()
+    var selectedCategories = [ReNote_Core.Category]()
+    
+    var withAllCategory: Bool = true
 
     init() {
         let layout = UICollectionViewFlowLayout()
@@ -23,6 +26,7 @@ class CategoriesCollectionView: UICollectionView {
         
         delegate = self
         dataSource = self
+        allowsMultipleSelection = true
         register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: CategoryCollectionViewCell.reuseId)
         
         translatesAutoresizingMaskIntoConstraints = false
@@ -43,39 +47,46 @@ class CategoriesCollectionView: UICollectionView {
     
     @objc func tap(sender: UITapGestureRecognizer) {
         if let indexPath = self.indexPathForItem(at: sender.location(in: self)) {
-            let cell = self.cellForItem(at: indexPath) as! CategoryCollectionViewCell
-            cells[indexPath.row].isActive = !cells[indexPath.row].isActive
-            cell.setHighlighted(cells[indexPath.row].isActive)
-            
-            if let delegate = self.categoriesDelegate {
-                let categoryId = cells[indexPath.row].category.id
-                if cells[indexPath.row].isActive {
-                    delegate.categorySelected(id: Int(categoryId))
-                } else {
-                    delegate.categoryDeselected(id: Int(categoryId))
-                }
-            }
+            selectCategory(at: indexPath)
+        }
+    }
+    
+    func selectCategory(at indexPath: IndexPath) {
+        let category = categories[indexPath.row]
+        
+        if let index = selectedCategories.firstIndex(of: category) {
+            selectedCategories.remove(at: index)
+            deselectItem(at: indexPath, animated: true)
+            categoriesDelegate?.categoryDeselected(id: Int(category.id))
+        } else {
+            selectedCategories.append(category)
+            selectItem(at: indexPath, animated: true, scrollPosition: .left)
+            categoriesDelegate?.categorySelected(id: Int(category.id))
         }
     }
     
     func setCategories(_ categories: [ReNote_Core.Category]) {
-        var newCells = [CategoryCellModel]()
+        var newcategories = categories
         
-        newCells.append(CategoryCellModel(category: ReNote_Core.Category(id: -1, name: "All"), isActive: true))
-        
-        for category in categories {
-            newCells.append(CategoryCellModel(category: category, isActive: false))
+        if withAllCategory {
+            newcategories.insert(ReNote_Core.Category(id: -1, name: "All"), at: 0)
         }
         
-        cells = newCells
+        self.categories = newcategories
         
         reloadData()
     }
     
-    func addCategory(_ category: ReNote_Core.Category) {
-        cells.append(CategoryCellModel(category: category, isActive: true))
-        
-        insertItems(at: [IndexPath(row: cells.count - 1, section: 0)])
+    func addCategory(_ category: ReNote_Core.Category, needsToBeSelected: Bool = false) {
+        let indexPath = IndexPath(row: categories.count, section: 0)
+        performBatchUpdates({
+            self.categories.append(category)
+            insertItems(at: [indexPath])
+        }, completion: { completed in
+            if (needsToBeSelected) {
+                self.selectCategory(at: indexPath)
+            }
+        })
     }
     
 }
@@ -83,22 +94,34 @@ class CategoriesCollectionView: UICollectionView {
 extension CategoriesCollectionView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
      
      func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-         return cells.count
+         return categories.count
     }
         
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cellData = cells[indexPath.row]
+        let categoryData = categories[indexPath.row]
         let cell = dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.reuseId, for: indexPath) as! CategoryCollectionViewCell
-        cell.nameLabel.text = cellData.category.name
-        cell.setHighlighted(cellData.isActive)
+        cell.nameLabel.text = categoryData.name
+//        cell.setHighlighted(cellData.isActive)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let cellWidth = cells[indexPath.row].category.name.size(withAttributes: nil)
+        let cellWidth = categories[indexPath.row].name.size(withAttributes: nil)
         
         return CGSize(width: cellWidth.width + 80, height: frame.height - 20 )
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Select item at \(indexPath)")
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        print("Deselect item at \(indexPath)")
     }
     
 }

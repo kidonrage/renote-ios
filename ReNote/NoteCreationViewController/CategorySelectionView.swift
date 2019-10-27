@@ -13,6 +13,9 @@ class CategorySelectionView: UIView {
     
     let storage = Storage()
     
+    var delegate: CategorySelectionViewDelegate?
+    
+    var parentController: UIViewController?
     let header = SectionHeaderLabel(text: "Category")
     
     let addButton: UIButton = {
@@ -34,6 +37,7 @@ class CategorySelectionView: UIView {
         
         heightAnchor.constraint(equalToConstant: 120).isActive = true
         
+        categoriesList.withAllCategory = false
         categoriesList.setCategories(storage.getCategories())
         
         setupUI()
@@ -54,11 +58,13 @@ class CategorySelectionView: UIView {
             
             let newCategory = self.storage.addCategory(name: name)
             
-            self.categoriesList.addCategory(newCategory)
+            self.categoriesList.addCategory(newCategory, needsToBeSelected: true)
+            
+            self.delegate?.didAddCategory(newCategory)
         }))
         ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
-        window?.rootViewController?.present(ac, animated: true, completion: nil)
+        parentController?.present(ac, animated: true, completion: nil)
     }
     
     private func setupUI() {
@@ -79,5 +85,9 @@ class CategorySelectionView: UIView {
             categoriesList.heightAnchor.constraint(equalToConstant: 80)
         ])
     }
+    
+}
 
+protocol CategorySelectionViewDelegate {
+    func didAddCategory(_ category: ReNote_Core.Category)
 }

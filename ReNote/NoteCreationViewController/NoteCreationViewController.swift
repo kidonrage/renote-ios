@@ -12,7 +12,6 @@ import ReNote_Core
 class NoteCreationViewController: UIViewController {
     
     let storage = Storage()
-    var chosenCategories = [Int]()
     
     var delegate: NoteCreationControllerDelegate?
     
@@ -34,8 +33,9 @@ class NoteCreationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        categorySelectionView.categoriesList.categoriesDelegate = self
-
+        categorySelectionView.parentController = self
+        categorySelectionView.delegate = self
+        
         title = "Creating a note"
         view.backgroundColor = .white
         
@@ -77,7 +77,7 @@ class NoteCreationViewController: UIViewController {
             attachedLink = URL(string: linkText)
         }
         
-        let chosenCategories = self.chosenCategories.map { categoryId in KotlinLong(value: Int64(categoryId))}
+        let chosenCategories = self.categorySelectionView.categoriesList.selectedCategories.map { category in KotlinLong(value: Int64(category.id))}
         
         let addedNote = storage.addNote(
             name: name,
@@ -85,7 +85,7 @@ class NoteCreationViewController: UIViewController {
             attachedLink: attachedLink?.absoluteString,
             attachedCategories: chosenCategories
         )
-
+        
         dismiss(animated: true) {
             self.delegate?.didAddNote(addedNote)
         }
@@ -103,18 +103,13 @@ class NoteCreationViewController: UIViewController {
 
 }
 
-extension NoteCreationViewController: CategoriesCollectionViewDelegate {
-    func categorySelected(id: Int) {
-        chosenCategories.append(id)
-        print(chosenCategories)
-    }
-    
-    func categoryDeselected(id: Int) {
-        chosenCategories = chosenCategories.filter {$0 != id}
-        print(chosenCategories)
+extension NoteCreationViewController: CategorySelectionViewDelegate {
+    func didAddCategory(_ category: ReNote_Core.Category) {
+        delegate?.didAddCategory(category)
     }
 }
 
 protocol NoteCreationControllerDelegate {
     func didAddNote(_ note: Note)
+    func didAddCategory(_ category: ReNote_Core.Category)
 }
