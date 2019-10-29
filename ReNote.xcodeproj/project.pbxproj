@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E12A6D192366A353005F45F5 /* CategoriesAlignedCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12A6D182366A353005F45F5 /* CategoriesAlignedCollection.swift */; };
+		E12A6D1B2366A815005F45F5 /* TrainingModeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12A6D1A2366A815005F45F5 /* TrainingModeSelectionView.swift */; };
+		E13CBF0D23686319007B38E7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13CBF0C23686319007B38E7 /* CardView.swift */; };
+		E13CBF1023686497007B38E7 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13CBF0F23686497007B38E7 /* Extensions+UIView.swift */; };
+		E14BC3992367175200598ACE /* AlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14BC3982367175200598ACE /* AlignedCollectionViewFlowLayout.swift */; };
 		E18BCC782355F605005B1CE3 /* ReNote_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18BCC762355F5FE005B1CE3 /* ReNote_Core.framework */; };
 		E18BCC792355F605005B1CE3 /* ReNote_Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E18BCC762355F5FE005B1CE3 /* ReNote_Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E1A888FC236723A00082D8BC /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A888FB236723A00082D8BC /* TrainingViewController.swift */; };
 		E1D1FAFE235201BD001A7071 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FAFD235201BD001A7071 /* AppDelegate.swift */; };
 		E1D1FB00235201BD001A7071 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FAFF235201BD001A7071 /* SceneDelegate.swift */; };
 		E1D1FB02235201BD001A7071 /* NotesListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB01235201BD001A7071 /* NotesListController.swift */; };
@@ -47,7 +53,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E12A6D182366A353005F45F5 /* CategoriesAlignedCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesAlignedCollection.swift; sourceTree = "<group>"; };
+		E12A6D1A2366A815005F45F5 /* TrainingModeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModeSelectionView.swift; sourceTree = "<group>"; };
+		E13CBF0C23686319007B38E7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		E13CBF0F23686497007B38E7 /* Extensions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
+		E14BC3982367175200598ACE /* AlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		E18BCC762355F5FE005B1CE3 /* ReNote_Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReNote_Core.framework; path = ../../Study/KotlinNative/_ReNote/build/bin/ios/debugFramework/ReNote_Core.framework; sourceTree = "<group>"; };
+		E1A888FB236723A00082D8BC /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		E1D1FAFA235201BD001A7071 /* ReNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D1FAFD235201BD001A7071 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1D1FAFF235201BD001A7071 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,12 +97,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E13CBF0E2368647E007B38E7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E13CBF0F23686497007B38E7 /* Extensions+UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		E18BCC5B2355EB9E005B1CE3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				E18BCC762355F5FE005B1CE3 /* ReNote_Core.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1A888FA2367237F0082D8BC /* TrainingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E1A888FB236723A00082D8BC /* TrainingViewController.swift */,
+				E13CBF0C23686319007B38E7 /* CardView.swift */,
+			);
+			path = TrainingViewController;
 			sourceTree = "<group>";
 		};
 		E1D1FAF1235201BD001A7071 = {
@@ -115,6 +144,7 @@
 			children = (
 				E1FFC29F235C2FCE00790838 /* NotesListController */,
 				E1DF72FB23542B0E001B577C /* StartTrainingViewController */,
+				E1A888FA2367237F0082D8BC /* TrainingViewController */,
 				E1DF72F423534A49001B577C /* UIComponents */,
 				E1DF72ED23533204001B577C /* NoteCreationViewController */,
 				E1D1FB1D23521D33001A7071 /* NotesTableView */,
@@ -126,6 +156,7 @@
 				E1D1FB08235201BE001A7071 /* LaunchScreen.storyboard */,
 				E1D1FB0B235201BE001A7071 /* Info.plist */,
 				E1D1FB24235314AC001A7071 /* UIColor+theme.swift */,
+				E13CBF0E2368647E007B38E7 /* Extensions */,
 			);
 			path = ReNote;
 			sourceTree = "<group>";
@@ -164,6 +195,7 @@
 			children = (
 				E1DF72F523534AC2001B577C /* SectionHeaderLabel.swift */,
 				E1DF72F9235353C6001B577C /* UITextFieldLimited.swift */,
+				E14BC3982367175200598ACE /* AlignedCollectionViewFlowLayout.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -172,6 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				E1DF72FC23542B55001B577C /* StartTrainingViewController.swift */,
+				E12A6D182366A353005F45F5 /* CategoriesAlignedCollection.swift */,
+				E12A6D1A2366A815005F45F5 /* TrainingModeSelectionView.swift */,
 			);
 			path = StartTrainingViewController;
 			sourceTree = "<group>";
@@ -259,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E12A6D1B2366A815005F45F5 /* TrainingModeSelectionView.swift in Sources */,
 				E1DF72F623534AC2001B577C /* SectionHeaderLabel.swift in Sources */,
 				E1D1FB02235201BD001A7071 /* NotesListController.swift in Sources */,
 				E1D1FAFE235201BD001A7071 /* AppDelegate.swift in Sources */,
@@ -270,13 +305,18 @@
 				E1D1FB00235201BD001A7071 /* SceneDelegate.swift in Sources */,
 				E1DF72FD23542B55001B577C /* StartTrainingViewController.swift in Sources */,
 				E1D1FB1F23521D4E001A7071 /* NotesTableView.swift in Sources */,
+				E14BC3992367175200598ACE /* AlignedCollectionViewFlowLayout.swift in Sources */,
 				E1FFC2A1235C2FF400790838 /* NotesListController+UITableView.swift in Sources */,
 				E1DF72F123533D2E001B577C /* CategorySelectionView.swift in Sources */,
+				E12A6D192366A353005F45F5 /* CategoriesAlignedCollection.swift in Sources */,
 				E1FFC2A3235C315400790838 /* NotesListController+CategoriesCollectionView.swift in Sources */,
 				E1FFC2A5235C318800790838 /* NotesListController+NoteCreationController.swift in Sources */,
 				E1DF72EF2353321E001B577C /* NoteCreationViewController.swift in Sources */,
 				E1D1FB2323522061001A7071 /* NotesTableViewCell.swift in Sources */,
+				E1A888FC236723A00082D8BC /* TrainingViewController.swift in Sources */,
+				E13CBF0D23686319007B38E7 /* CardView.swift in Sources */,
 				E1DF72F32353448E001B577C /* LinkInputView.swift in Sources */,
+				E13CBF1023686497007B38E7 /* Extensions+UIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
