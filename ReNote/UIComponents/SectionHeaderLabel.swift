@@ -16,6 +16,10 @@ class SectionHeaderLabel: UILabel {
         
         self.font = .monospacedDigitSystemFont(ofSize: 12, weight: .black)
         self.text = text.uppercased()
+        
+        NSLayoutConstraint.activate([
+            self.heightAnchor.constraint(equalToConstant: 30)
+        ])
     }
     
     required init?(coder: NSCoder) {
