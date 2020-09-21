@@ -7,36 +7,74 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E12A6D192366A353005F45F5 /* CategoriesAlignedCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12A6D182366A353005F45F5 /* CategoriesAlignedCollection.swift */; };
-		E12A6D1B2366A815005F45F5 /* TrainingModeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12A6D1A2366A815005F45F5 /* TrainingModeSelectionView.swift */; };
-		E13CBF0D23686319007B38E7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13CBF0C23686319007B38E7 /* CardView.swift */; };
-		E13CBF1023686497007B38E7 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13CBF0F23686497007B38E7 /* Extensions+UIView.swift */; };
-		E14BC3992367175200598ACE /* AlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14BC3982367175200598ACE /* AlignedCollectionViewFlowLayout.swift */; };
-		E18BCC782355F605005B1CE3 /* ReNote_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18BCC762355F5FE005B1CE3 /* ReNote_Core.framework */; };
-		E18BCC792355F605005B1CE3 /* ReNote_Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E18BCC762355F5FE005B1CE3 /* ReNote_Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E1A888FC236723A00082D8BC /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A888FB236723A00082D8BC /* TrainingViewController.swift */; };
+		E177ADCE2518ECFD008031A7 /* ReNote_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = E177ADCC2518ECFD008031A7 /* ReNote_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E177ADD12518ECFD008031A7 /* ReNote_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E177ADCA2518ECFD008031A7 /* ReNote_iOS.framework */; };
+		E177ADD22518ECFD008031A7 /* ReNote_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E177ADCA2518ECFD008031A7 /* ReNote_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E177ADDF2518ED2D008031A7 /* ReNoteKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E177ADDD2518ED2D008031A7 /* ReNoteKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E177ADE22518ED2D008031A7 /* ReNoteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E177ADDB2518ED2D008031A7 /* ReNoteKit.framework */; };
+		E177ADE32518ED2D008031A7 /* ReNoteKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E177ADDB2518ED2D008031A7 /* ReNoteKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E177ADF02518ED39008031A7 /* ReNoteUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E177ADEE2518ED39008031A7 /* ReNoteUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E177ADF32518ED39008031A7 /* ReNoteUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E177ADEC2518ED39008031A7 /* ReNoteUIKit.framework */; };
+		E177ADF42518ED39008031A7 /* ReNoteUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E177ADEC2518ED39008031A7 /* ReNoteUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E177ADFF2518F018008031A7 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = E177ADFE2518F018008031A7 /* Note.swift */; };
+		E177AE012518F0A3008031A7 /* NoteCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E177AE002518F0A3008031A7 /* NoteCategory.swift */; };
+		E177AE062518F6BE008031A7 /* DetailedCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13CBF1223693037007B38E7 /* DetailedCardController.swift */; };
+		E177AE072518F6BE008031A7 /* NotesListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB01235201BD001A7071 /* NotesListController.swift */; };
+		E177AE082518F6BE008031A7 /* NotesListController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFC2A0235C2FF400790838 /* NotesListController+UITableView.swift */; };
+		E177AE092518F6BE008031A7 /* NotesListController+CategoriesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFC2A2235C315400790838 /* NotesListController+CategoriesCollectionView.swift */; };
+		E177AE0A2518F6BE008031A7 /* NotesListController+NoteCreationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFC2A4235C318800790838 /* NotesListController+NoteCreationController.swift */; };
+		E177AE0B2518F6BE008031A7 /* StartTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72FC23542B55001B577C /* StartTrainingViewController.swift */; };
+		E177AE0C2518F6BE008031A7 /* CategoriesAlignedCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12A6D182366A353005F45F5 /* CategoriesAlignedCollection.swift */; };
+		E177AE0D2518F6BE008031A7 /* TrainingModeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12A6D1A2366A815005F45F5 /* TrainingModeSelectionView.swift */; };
+		E177AE0E2518F6BE008031A7 /* TrainingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A888FB236723A00082D8BC /* TrainingController.swift */; };
+		E177AE0F2518F6BE008031A7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13CBF0C23686319007B38E7 /* CardView.swift */; };
+		E177AE102518F6BE008031A7 /* NoteCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72EE2353321E001B577C /* NoteCreationViewController.swift */; };
+		E177AE112518F6BE008031A7 /* CategorySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72F023533D2E001B577C /* CategorySelectionView.swift */; };
+		E177AE122518F6BE008031A7 /* LinkInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72F22353448E001B577C /* LinkInputView.swift */; };
+		E177AE132518F6BE008031A7 /* NoteTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72F723535263001B577C /* NoteTextInputView.swift */; };
+		E177AE142518F6BE008031A7 /* NotesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB1E23521D4E001A7071 /* NotesTableView.swift */; };
+		E177AE152518F6BE008031A7 /* NotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB2223522061001A7071 /* NotesTableViewCell.swift */; };
+		E177AE162518F6BE008031A7 /* CategoriesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB1323520B4D001A7071 /* CategoriesCollectionView.swift */; };
+		E177AE172518F6BF008031A7 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB1723520C3A001A7071 /* CategoryCollectionViewCell.swift */; };
+		E177AE182518F6FB008031A7 /* UIColor+theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB24235314AC001A7071 /* UIColor+theme.swift */; };
+		E177AE192518F6FB008031A7 /* AlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14BC3982367175200598ACE /* AlignedCollectionViewFlowLayout.swift */; };
+		E177AE1A2518F6FB008031A7 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13CBF0F23686497007B38E7 /* Extensions+UIView.swift */; };
+		E177AE1B2518F6FB008031A7 /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13CBF14236945A2007B38E7 /* Extensions+UIViewController.swift */; };
+		E177AE1C2518F6FB008031A7 /* SectionHeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72F523534AC2001B577C /* SectionHeaderLabel.swift */; };
+		E177AE1D2518F6FB008031A7 /* UITextFieldLimited.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72F9235353C6001B577C /* UITextFieldLimited.swift */; };
+		E177AE1E2518F71F008031A7 /* ReNoteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E177ADDB2518ED2D008031A7 /* ReNoteKit.framework */; };
+		E177AE1F2518F71F008031A7 /* ReNoteUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E177ADEC2518ED39008031A7 /* ReNoteUIKit.framework */; };
+		E177AE202518F72F008031A7 /* ReNoteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E177ADDB2518ED2D008031A7 /* ReNoteKit.framework */; };
+		E177AE252518FCB8008031A7 /* NotesDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E177AE242518FCB8008031A7 /* NotesDataStore.swift */; };
 		E1D1FAFE235201BD001A7071 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FAFD235201BD001A7071 /* AppDelegate.swift */; };
 		E1D1FB00235201BD001A7071 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FAFF235201BD001A7071 /* SceneDelegate.swift */; };
-		E1D1FB02235201BD001A7071 /* NotesListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB01235201BD001A7071 /* NotesListController.swift */; };
-		E1D1FB05235201BD001A7071 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D1FB03235201BD001A7071 /* Main.storyboard */; };
 		E1D1FB07235201BE001A7071 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D1FB06235201BE001A7071 /* Assets.xcassets */; };
 		E1D1FB0A235201BE001A7071 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D1FB08235201BE001A7071 /* LaunchScreen.storyboard */; };
-		E1D1FB1423520B4D001A7071 /* CategoriesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB1323520B4D001A7071 /* CategoriesCollectionView.swift */; };
-		E1D1FB1823520C3A001A7071 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB1723520C3A001A7071 /* CategoryCollectionViewCell.swift */; };
-		E1D1FB1F23521D4E001A7071 /* NotesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB1E23521D4E001A7071 /* NotesTableView.swift */; };
-		E1D1FB2323522061001A7071 /* NotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB2223522061001A7071 /* NotesTableViewCell.swift */; };
-		E1D1FB25235314AC001A7071 /* UIColor+theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1FB24235314AC001A7071 /* UIColor+theme.swift */; };
-		E1DF72EF2353321E001B577C /* NoteCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72EE2353321E001B577C /* NoteCreationViewController.swift */; };
-		E1DF72F123533D2E001B577C /* CategorySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72F023533D2E001B577C /* CategorySelectionView.swift */; };
-		E1DF72F32353448E001B577C /* LinkInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72F22353448E001B577C /* LinkInputView.swift */; };
-		E1DF72F623534AC2001B577C /* SectionHeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72F523534AC2001B577C /* SectionHeaderLabel.swift */; };
-		E1DF72F823535263001B577C /* NoteTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72F723535263001B577C /* NoteTextInputView.swift */; };
-		E1DF72FA235353C6001B577C /* UITextFieldLimited.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72F9235353C6001B577C /* UITextFieldLimited.swift */; };
-		E1DF72FD23542B55001B577C /* StartTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF72FC23542B55001B577C /* StartTrainingViewController.swift */; };
-		E1FFC2A1235C2FF400790838 /* NotesListController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFC2A0235C2FF400790838 /* NotesListController+UITableView.swift */; };
-		E1FFC2A3235C315400790838 /* NotesListController+CategoriesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFC2A2235C315400790838 /* NotesListController+CategoriesCollectionView.swift */; };
-		E1FFC2A5235C318800790838 /* NotesListController+NoteCreationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFC2A4235C318800790838 /* NotesListController+NoteCreationController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E177ADCF2518ECFD008031A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1D1FAF2235201BD001A7071 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E177ADC92518ECFD008031A7;
+			remoteInfo = ReNote_iOS;
+		};
+		E177ADE02518ED2D008031A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1D1FAF2235201BD001A7071 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E177ADDA2518ED2D008031A7;
+			remoteInfo = ReNoteKit;
+		};
+		E177ADF12518ED39008031A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1D1FAF2235201BD001A7071 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E177ADEB2518ED39008031A7;
+			remoteInfo = ReNoteUIKit;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		E18BCC6A2355ED13005B1CE3 /* Embed Frameworks */ = {
@@ -45,7 +83,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E18BCC792355F605005B1CE3 /* ReNote_Core.framework in Embed Frameworks */,
+				E177ADF42518ED39008031A7 /* ReNoteUIKit.framework in Embed Frameworks */,
+				E177ADD22518ECFD008031A7 /* ReNote_iOS.framework in Embed Frameworks */,
+				E177ADE32518ED2D008031A7 /* ReNoteKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,14 +97,26 @@
 		E12A6D1A2366A815005F45F5 /* TrainingModeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModeSelectionView.swift; sourceTree = "<group>"; };
 		E13CBF0C23686319007B38E7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		E13CBF0F23686497007B38E7 /* Extensions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
+		E13CBF1223693037007B38E7 /* DetailedCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCardController.swift; sourceTree = "<group>"; };
+		E13CBF14236945A2007B38E7 /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
 		E14BC3982367175200598ACE /* AlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
-		E18BCC762355F5FE005B1CE3 /* ReNote_Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReNote_Core.framework; path = ../../Study/KotlinNative/_ReNote/build/bin/ios/debugFramework/ReNote_Core.framework; sourceTree = "<group>"; };
-		E1A888FB236723A00082D8BC /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
+		E177ADCA2518ECFD008031A7 /* ReNote_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReNote_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E177ADCC2518ECFD008031A7 /* ReNote_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReNote_iOS.h; sourceTree = "<group>"; };
+		E177ADCD2518ECFD008031A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E177ADDB2518ED2D008031A7 /* ReNoteKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReNoteKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E177ADDD2518ED2D008031A7 /* ReNoteKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReNoteKit.h; sourceTree = "<group>"; };
+		E177ADDE2518ED2D008031A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E177ADEC2518ED39008031A7 /* ReNoteUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReNoteUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E177ADEE2518ED39008031A7 /* ReNoteUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReNoteUIKit.h; sourceTree = "<group>"; };
+		E177ADEF2518ED39008031A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E177ADFE2518F018008031A7 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		E177AE002518F0A3008031A7 /* NoteCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCategory.swift; sourceTree = "<group>"; };
+		E177AE242518FCB8008031A7 /* NotesDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDataStore.swift; sourceTree = "<group>"; };
+		E1A888FB236723A00082D8BC /* TrainingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingController.swift; sourceTree = "<group>"; };
 		E1D1FAFA235201BD001A7071 /* ReNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D1FAFD235201BD001A7071 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1D1FAFF235201BD001A7071 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E1D1FB01235201BD001A7071 /* NotesListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListController.swift; sourceTree = "<group>"; };
-		E1D1FB04235201BD001A7071 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1D1FB06235201BE001A7071 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1D1FB09235201BE001A7071 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1D1FB0B235201BE001A7071 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,29 +138,169 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E177ADC72518ECFD008031A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E177AE1E2518F71F008031A7 /* ReNoteKit.framework in Frameworks */,
+				E177AE1F2518F71F008031A7 /* ReNoteUIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E177ADD82518ED2D008031A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E177ADE92518ED39008031A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E177AE202518F72F008031A7 /* ReNoteKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1D1FAF7235201BD001A7071 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E18BCC782355F605005B1CE3 /* ReNote_Core.framework in Frameworks */,
+				E177ADF32518ED39008031A7 /* ReNoteUIKit.framework in Frameworks */,
+				E177ADD12518ECFD008031A7 /* ReNote_iOS.framework in Frameworks */,
+				E177ADE22518ED2D008031A7 /* ReNoteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E13CBF0E2368647E007B38E7 /* Extensions */ = {
+		E13CBF1123693015007B38E7 /* DetailedCardController */ = {
 			isa = PBXGroup;
 			children = (
-				E13CBF0F23686497007B38E7 /* Extensions+UIView.swift */,
+				E13CBF1223693037007B38E7 /* DetailedCardController.swift */,
 			);
-			path = Extensions;
+			path = DetailedCardController;
+			sourceTree = "<group>";
+		};
+		E177ADCB2518ECFD008031A7 /* ReNote_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E177ADCC2518ECFD008031A7 /* ReNote_iOS.h */,
+				E177ADCD2518ECFD008031A7 /* Info.plist */,
+				E177ADF82518EDAF008031A7 /* iOSApp */,
+			);
+			path = ReNote_iOS;
+			sourceTree = "<group>";
+		};
+		E177ADDC2518ED2D008031A7 /* ReNoteKit */ = {
+			isa = PBXGroup;
+			children = (
+				E177ADDD2518ED2D008031A7 /* ReNoteKit.h */,
+				E177ADDE2518ED2D008031A7 /* Info.plist */,
+				E177ADFC2518F000008031A7 /* DataLayer */,
+			);
+			path = ReNoteKit;
+			sourceTree = "<group>";
+		};
+		E177ADED2518ED39008031A7 /* ReNoteUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				E177ADEE2518ED39008031A7 /* ReNoteUIKit.h */,
+				E177ADEF2518ED39008031A7 /* Info.plist */,
+				E177ADF92518EDCF008031A7 /* Reusable */,
+			);
+			path = ReNoteUIKit;
+			sourceTree = "<group>";
+		};
+		E177ADF82518EDAF008031A7 /* iOSApp */ = {
+			isa = PBXGroup;
+			children = (
+				E13CBF1123693015007B38E7 /* DetailedCardController */,
+				E1FFC29F235C2FCE00790838 /* NotesListController */,
+				E1DF72FB23542B0E001B577C /* StartTrainingViewController */,
+				E1A888FA2367237F0082D8BC /* TrainingViewController */,
+				E1DF72ED23533204001B577C /* NoteCreationViewController */,
+				E1D1FB1D23521D33001A7071 /* NotesTableView */,
+				E1D1FB1C23521D20001A7071 /* CategoriesCollectionView */,
+			);
+			path = iOSApp;
+			sourceTree = "<group>";
+		};
+		E177ADF92518EDCF008031A7 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				E177ADFB2518EE6F008031A7 /* Style */,
+				E177ADFA2518EE48008031A7 /* UIKit */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		E177ADFA2518EE48008031A7 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				E14BC3982367175200598ACE /* AlignedCollectionViewFlowLayout.swift */,
+				E13CBF0F23686497007B38E7 /* Extensions+UIView.swift */,
+				E13CBF14236945A2007B38E7 /* Extensions+UIViewController.swift */,
+				E1DF72F523534AC2001B577C /* SectionHeaderLabel.swift */,
+				E1DF72F9235353C6001B577C /* UITextFieldLimited.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		E177ADFB2518EE6F008031A7 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				E1D1FB24235314AC001A7071 /* UIColor+theme.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		E177ADFC2518F000008031A7 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				E177AE212518FC90008031A7 /* Repositories */,
+				E177ADFD2518F008008031A7 /* Model */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		E177ADFD2518F008008031A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E177ADFE2518F018008031A7 /* Note.swift */,
+				E177AE002518F0A3008031A7 /* NoteCategory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E177AE212518FC90008031A7 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				E177AE222518FC9C008031A7 /* Persistance */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		E177AE222518FC9C008031A7 /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				E177AE232518FCA4008031A7 /* NotesStore */,
+			);
+			path = Persistance;
+			sourceTree = "<group>";
+		};
+		E177AE232518FCA4008031A7 /* NotesStore */ = {
+			isa = PBXGroup;
+			children = (
+				E177AE242518FCB8008031A7 /* NotesDataStore.swift */,
+			);
+			path = NotesStore;
 			sourceTree = "<group>";
 		};
 		E18BCC5B2355EB9E005B1CE3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E18BCC762355F5FE005B1CE3 /* ReNote_Core.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -116,7 +308,7 @@
 		E1A888FA2367237F0082D8BC /* TrainingViewController */ = {
 			isa = PBXGroup;
 			children = (
-				E1A888FB236723A00082D8BC /* TrainingViewController.swift */,
+				E1A888FB236723A00082D8BC /* TrainingController.swift */,
 				E13CBF0C23686319007B38E7 /* CardView.swift */,
 			);
 			path = TrainingViewController;
@@ -126,8 +318,11 @@
 			isa = PBXGroup;
 			children = (
 				E1D1FAFC235201BD001A7071 /* ReNote */,
-				E1D1FAFB235201BD001A7071 /* Products */,
+				E177ADCB2518ECFD008031A7 /* ReNote_iOS */,
+				E177ADDC2518ED2D008031A7 /* ReNoteKit */,
+				E177ADED2518ED39008031A7 /* ReNoteUIKit */,
 				E18BCC5B2355EB9E005B1CE3 /* Frameworks */,
+				E1D1FAFB235201BD001A7071 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +330,9 @@
 			isa = PBXGroup;
 			children = (
 				E1D1FAFA235201BD001A7071 /* ReNote.app */,
+				E177ADCA2518ECFD008031A7 /* ReNote_iOS.framework */,
+				E177ADDB2518ED2D008031A7 /* ReNoteKit.framework */,
+				E177ADEC2518ED39008031A7 /* ReNoteUIKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,21 +340,11 @@
 		E1D1FAFC235201BD001A7071 /* ReNote */ = {
 			isa = PBXGroup;
 			children = (
-				E1FFC29F235C2FCE00790838 /* NotesListController */,
-				E1DF72FB23542B0E001B577C /* StartTrainingViewController */,
-				E1A888FA2367237F0082D8BC /* TrainingViewController */,
-				E1DF72F423534A49001B577C /* UIComponents */,
-				E1DF72ED23533204001B577C /* NoteCreationViewController */,
-				E1D1FB1D23521D33001A7071 /* NotesTableView */,
-				E1D1FB1C23521D20001A7071 /* CategoriesCollectionView */,
 				E1D1FAFD235201BD001A7071 /* AppDelegate.swift */,
 				E1D1FAFF235201BD001A7071 /* SceneDelegate.swift */,
-				E1D1FB03235201BD001A7071 /* Main.storyboard */,
 				E1D1FB06235201BE001A7071 /* Assets.xcassets */,
 				E1D1FB08235201BE001A7071 /* LaunchScreen.storyboard */,
 				E1D1FB0B235201BE001A7071 /* Info.plist */,
-				E1D1FB24235314AC001A7071 /* UIColor+theme.swift */,
-				E13CBF0E2368647E007B38E7 /* Extensions */,
 			);
 			path = ReNote;
 			sourceTree = "<group>";
@@ -190,16 +378,6 @@
 			path = NoteCreationViewController;
 			sourceTree = "<group>";
 		};
-		E1DF72F423534A49001B577C /* UIComponents */ = {
-			isa = PBXGroup;
-			children = (
-				E1DF72F523534AC2001B577C /* SectionHeaderLabel.swift */,
-				E1DF72F9235353C6001B577C /* UITextFieldLimited.swift */,
-				E14BC3982367175200598ACE /* AlignedCollectionViewFlowLayout.swift */,
-			);
-			path = UIComponents;
-			sourceTree = "<group>";
-		};
 		E1DF72FB23542B0E001B577C /* StartTrainingViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,7 +401,88 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		E177ADC52518ECFD008031A7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E177ADCE2518ECFD008031A7 /* ReNote_iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E177ADD62518ED2D008031A7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E177ADDF2518ED2D008031A7 /* ReNoteKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E177ADE72518ED39008031A7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E177ADF02518ED39008031A7 /* ReNoteUIKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		E177ADC92518ECFD008031A7 /* ReNote_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E177ADD32518ECFD008031A7 /* Build configuration list for PBXNativeTarget "ReNote_iOS" */;
+			buildPhases = (
+				E177ADC52518ECFD008031A7 /* Headers */,
+				E177ADC62518ECFD008031A7 /* Sources */,
+				E177ADC72518ECFD008031A7 /* Frameworks */,
+				E177ADC82518ECFD008031A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReNote_iOS;
+			productName = ReNote_iOS;
+			productReference = E177ADCA2518ECFD008031A7 /* ReNote_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E177ADDA2518ED2D008031A7 /* ReNoteKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E177ADE42518ED2D008031A7 /* Build configuration list for PBXNativeTarget "ReNoteKit" */;
+			buildPhases = (
+				E177ADD62518ED2D008031A7 /* Headers */,
+				E177ADD72518ED2D008031A7 /* Sources */,
+				E177ADD82518ED2D008031A7 /* Frameworks */,
+				E177ADD92518ED2D008031A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReNoteKit;
+			productName = ReNoteKit;
+			productReference = E177ADDB2518ED2D008031A7 /* ReNoteKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E177ADEB2518ED39008031A7 /* ReNoteUIKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E177ADF52518ED39008031A7 /* Build configuration list for PBXNativeTarget "ReNoteUIKit" */;
+			buildPhases = (
+				E177ADE72518ED39008031A7 /* Headers */,
+				E177ADE82518ED39008031A7 /* Sources */,
+				E177ADE92518ED39008031A7 /* Frameworks */,
+				E177ADEA2518ED39008031A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReNoteUIKit;
+			productName = ReNoteUIKit;
+			productReference = E177ADEC2518ED39008031A7 /* ReNoteUIKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		E1D1FAF9235201BD001A7071 /* ReNote */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1D1FB0E235201BE001A7071 /* Build configuration list for PBXNativeTarget "ReNote" */;
@@ -236,6 +495,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				E177ADF22518ED39008031A7 /* PBXTargetDependency */,
+				E177ADE12518ED2D008031A7 /* PBXTargetDependency */,
+				E177ADD02518ECFD008031A7 /* PBXTargetDependency */,
 			);
 			name = ReNote;
 			productName = ReNote;
@@ -252,6 +514,16 @@
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Vlad Eliseev";
 				TargetAttributes = {
+					E177ADC92518ECFD008031A7 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					E177ADDA2518ED2D008031A7 = {
+						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
+					};
+					E177ADEB2518ED39008031A7 = {
+						CreatedOnToolsVersion = 11.6;
+					};
 					E1D1FAF9235201BD001A7071 = {
 						CreatedOnToolsVersion = 11.1;
 					};
@@ -271,66 +543,125 @@
 			projectRoot = "";
 			targets = (
 				E1D1FAF9235201BD001A7071 /* ReNote */,
+				E177ADC92518ECFD008031A7 /* ReNote_iOS */,
+				E177ADEB2518ED39008031A7 /* ReNoteUIKit */,
+				E177ADDA2518ED2D008031A7 /* ReNoteKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E177ADC82518ECFD008031A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E177ADD92518ED2D008031A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E177ADEA2518ED39008031A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1D1FAF8235201BD001A7071 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E1D1FB0A235201BE001A7071 /* LaunchScreen.storyboard in Resources */,
 				E1D1FB07235201BE001A7071 /* Assets.xcassets in Resources */,
-				E1D1FB05235201BD001A7071 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E177ADC62518ECFD008031A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E177AE062518F6BE008031A7 /* DetailedCardController.swift in Sources */,
+				E177AE072518F6BE008031A7 /* NotesListController.swift in Sources */,
+				E177AE082518F6BE008031A7 /* NotesListController+UITableView.swift in Sources */,
+				E177AE092518F6BE008031A7 /* NotesListController+CategoriesCollectionView.swift in Sources */,
+				E177AE0A2518F6BE008031A7 /* NotesListController+NoteCreationController.swift in Sources */,
+				E177AE0B2518F6BE008031A7 /* StartTrainingViewController.swift in Sources */,
+				E177AE0C2518F6BE008031A7 /* CategoriesAlignedCollection.swift in Sources */,
+				E177AE0D2518F6BE008031A7 /* TrainingModeSelectionView.swift in Sources */,
+				E177AE0E2518F6BE008031A7 /* TrainingController.swift in Sources */,
+				E177AE0F2518F6BE008031A7 /* CardView.swift in Sources */,
+				E177AE102518F6BE008031A7 /* NoteCreationViewController.swift in Sources */,
+				E177AE112518F6BE008031A7 /* CategorySelectionView.swift in Sources */,
+				E177AE122518F6BE008031A7 /* LinkInputView.swift in Sources */,
+				E177AE132518F6BE008031A7 /* NoteTextInputView.swift in Sources */,
+				E177AE142518F6BE008031A7 /* NotesTableView.swift in Sources */,
+				E177AE152518F6BE008031A7 /* NotesTableViewCell.swift in Sources */,
+				E177AE162518F6BE008031A7 /* CategoriesCollectionView.swift in Sources */,
+				E177AE172518F6BF008031A7 /* CategoryCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E177ADD72518ED2D008031A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E177ADFF2518F018008031A7 /* Note.swift in Sources */,
+				E177AE012518F0A3008031A7 /* NoteCategory.swift in Sources */,
+				E177AE252518FCB8008031A7 /* NotesDataStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E177ADE82518ED39008031A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E177AE182518F6FB008031A7 /* UIColor+theme.swift in Sources */,
+				E177AE192518F6FB008031A7 /* AlignedCollectionViewFlowLayout.swift in Sources */,
+				E177AE1A2518F6FB008031A7 /* Extensions+UIView.swift in Sources */,
+				E177AE1B2518F6FB008031A7 /* Extensions+UIViewController.swift in Sources */,
+				E177AE1C2518F6FB008031A7 /* SectionHeaderLabel.swift in Sources */,
+				E177AE1D2518F6FB008031A7 /* UITextFieldLimited.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1D1FAF6235201BD001A7071 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E12A6D1B2366A815005F45F5 /* TrainingModeSelectionView.swift in Sources */,
-				E1DF72F623534AC2001B577C /* SectionHeaderLabel.swift in Sources */,
-				E1D1FB02235201BD001A7071 /* NotesListController.swift in Sources */,
 				E1D1FAFE235201BD001A7071 /* AppDelegate.swift in Sources */,
-				E1D1FB1423520B4D001A7071 /* CategoriesCollectionView.swift in Sources */,
-				E1D1FB25235314AC001A7071 /* UIColor+theme.swift in Sources */,
-				E1DF72FA235353C6001B577C /* UITextFieldLimited.swift in Sources */,
-				E1D1FB1823520C3A001A7071 /* CategoryCollectionViewCell.swift in Sources */,
-				E1DF72F823535263001B577C /* NoteTextInputView.swift in Sources */,
 				E1D1FB00235201BD001A7071 /* SceneDelegate.swift in Sources */,
-				E1DF72FD23542B55001B577C /* StartTrainingViewController.swift in Sources */,
-				E1D1FB1F23521D4E001A7071 /* NotesTableView.swift in Sources */,
-				E14BC3992367175200598ACE /* AlignedCollectionViewFlowLayout.swift in Sources */,
-				E1FFC2A1235C2FF400790838 /* NotesListController+UITableView.swift in Sources */,
-				E1DF72F123533D2E001B577C /* CategorySelectionView.swift in Sources */,
-				E12A6D192366A353005F45F5 /* CategoriesAlignedCollection.swift in Sources */,
-				E1FFC2A3235C315400790838 /* NotesListController+CategoriesCollectionView.swift in Sources */,
-				E1FFC2A5235C318800790838 /* NotesListController+NoteCreationController.swift in Sources */,
-				E1DF72EF2353321E001B577C /* NoteCreationViewController.swift in Sources */,
-				E1D1FB2323522061001A7071 /* NotesTableViewCell.swift in Sources */,
-				E1A888FC236723A00082D8BC /* TrainingViewController.swift in Sources */,
-				E13CBF0D23686319007B38E7 /* CardView.swift in Sources */,
-				E1DF72F32353448E001B577C /* LinkInputView.swift in Sources */,
-				E13CBF1023686497007B38E7 /* Extensions+UIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		E1D1FB03235201BD001A7071 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E1D1FB04235201BD001A7071 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		E177ADD02518ECFD008031A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E177ADC92518ECFD008031A7 /* ReNote_iOS */;
+			targetProxy = E177ADCF2518ECFD008031A7 /* PBXContainerItemProxy */;
 		};
+		E177ADE12518ED2D008031A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E177ADDA2518ED2D008031A7 /* ReNoteKit */;
+			targetProxy = E177ADE02518ED2D008031A7 /* PBXContainerItemProxy */;
+		};
+		E177ADF22518ED39008031A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E177ADEB2518ED39008031A7 /* ReNoteUIKit */;
+			targetProxy = E177ADF12518ED39008031A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
 		E1D1FB08235201BE001A7071 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -342,6 +673,177 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E177ADD42518ECFD008031A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RNXT6P5KC8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ReNote_iOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.VladEliseev.ReNote-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E177ADD52518ECFD008031A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RNXT6P5KC8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ReNote_iOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.VladEliseev.ReNote-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E177ADE52518ED2D008031A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RNXT6P5KC8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ReNoteKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.VladEliseev.ReNoteKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E177ADE62518ED2D008031A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RNXT6P5KC8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ReNoteKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.VladEliseev.ReNoteKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E177ADF62518ED39008031A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RNXT6P5KC8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ReNoteUIKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.VladEliseev.ReNoteUIKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E177ADF72518ED39008031A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RNXT6P5KC8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ReNoteUIKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.VladEliseev.ReNoteUIKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		E1D1FB0C235201BE001A7071 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -461,6 +963,7 @@
 		E1D1FB0F235201BE001A7071 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RNXT6P5KC8;
@@ -469,6 +972,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = ReNote/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -483,6 +987,7 @@
 		E1D1FB10235201BE001A7071 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RNXT6P5KC8;
@@ -491,6 +996,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = ReNote/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -505,6 +1011,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E177ADD32518ECFD008031A7 /* Build configuration list for PBXNativeTarget "ReNote_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E177ADD42518ECFD008031A7 /* Debug */,
+				E177ADD52518ECFD008031A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E177ADE42518ED2D008031A7 /* Build configuration list for PBXNativeTarget "ReNoteKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E177ADE52518ED2D008031A7 /* Debug */,
+				E177ADE62518ED2D008031A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E177ADF52518ED39008031A7 /* Build configuration list for PBXNativeTarget "ReNoteUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E177ADF62518ED39008031A7 /* Debug */,
+				E177ADF72518ED39008031A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E1D1FAF5235201BD001A7071 /* Build configuration list for PBXProject "ReNote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
